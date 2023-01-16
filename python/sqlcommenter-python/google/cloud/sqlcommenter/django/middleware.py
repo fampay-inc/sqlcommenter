@@ -91,7 +91,7 @@ class QueryWrapper:
         #  * https://github.com/basecamp/marginalia/pull/80
 
         # Add the query to the query log if debugging.
-        if isinstance(context['cursor'], CursorDebugWrapper):
-            context['connection'].queries_log.append(sql)
+        # if isinstance(context['cursor'], CursorDebugWrapper):
+        #     context['connection'].queries_log.append(sql)
 
         return execute(sql, params, many, context)
